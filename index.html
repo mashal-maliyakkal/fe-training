@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider</title>
+    <link href="main.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="bar">
+        Add Patient Payment
+        <label style="float: right">X</label>
+    </div>
+    <!--Action Radio Buttons-->
+    <div class="content">
+        Select Action
+        &nbsp;&nbsp;
+        <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
+        <label for="new" class="no-bold">
+            Add New Payment
+        </label>
+        &nbsp;&nbsp;&nbsp;
+        <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
+        <label for="pending" class="no-bold">
+            Apply Pending Credits
+        </label>
+        <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
+    </div>
+    <!--<div id="date">Heregoes  </div>-->
+
+    <hr class="cust"/>
+
+    <div class="content">
+        <!--Step 1-->
+        <div>
+            Step 1: Collect Payment from patient<br />
+            <div class="container-fluid">
+                <div class="row">
+                    <!--Grey Box-->
+                    <div class="greybox col-md-5">
+                        <!--<div class="container">-->
+                            <div class="row">
+                                <div class="col-sm-5" style="font-weight:bold;">
+                                    Balance Summary
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    Todays Account Charges
+                                </div>
+                                <div class="col-sm-5">
+                                    : $20.00
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    Total Account Balance
+                                </div>
+                                <div class="col-sm-5">
+                                    : $172.20
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <hr class="cust" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    Unapplied Credits
+                                </div>
+                                <div class="col-sm-5">
+                                    : $253.00
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <hr class="cust" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    Net Account Payable
+                                </div>
+                                <div class="col-sm-5">
+                                    : $0.00
+                                </div>
+                            </div>
+                        <!--</div>-->
+                    </div>
+                    <!--Amount Details-->
+                    <div class="col">
+                        <!--
+                            <form>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="payment_amt" class="col-sm-1">
+                                        Payment Amount*
+                                    </label>
+                                    <input type="number" class="col-sm-2" id="payment_amt" placeholder="10.00">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="payment_date" class="col-sm-1">
+                                        Payment Date*
+                                    </label>
+                                    <input type="date" class="col-sm-1" id="date" placeholder="MM-DD-YYYY">
+                                </div>
+                            </div>
+                        </form>
+                        Location*
+
+                        Payment Type*
+                        Reference No*
+                        Provider
+                        Notes
+                            -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="cust"/>
+        
+        <!--Step 2-->
+        <div>
+            Step 2: Select the procedure codes to post payments to
+        </div>
+    </div>
+    
+    <hr class="cust"/>
+    <button class="submit">Add and Apply Payment</button>
+
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>

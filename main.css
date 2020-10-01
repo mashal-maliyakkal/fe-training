@@ -1,0 +1,66 @@
+.bar {
+	background: #147b8d;
+	font: 800;
+	color : #ffffff;
+	padding : 2mm;
+}
+
+/* todo : !important omitable? */
+body {
+	color: rgb(68, 81, 92) !important;
+}
+hr.cust {
+	border: none;
+	height: 1.5px;
+	background-color: rgb(213,213,213);
+	margin: 0px;
+}
+
+.greybox {
+	background: #efefef;
+	border-radius: 7px;
+	padding: 15px;
+	margin: 3mm;
+}
+
+/* rename to margin */
+.content{
+	margin-right: 3mm;
+	margin-top: 3mm;
+	margin-bottom: 3mm;
+	margin-left: 7mm;
+}
+
+.submit {
+	background: #ffe8c0;
+	outline: auto;
+	outline-color: #ca6760;
+	margin-right: 4mm;
+	color: #000000;
+	float: right;
+}
+
+/*
+	colours
+
+	68, 81, 92    - font
+
+	239, 239, 239 - grey box				#efefef
+	196, 196, 196 - hint text				#c4c4c4
+	255, 239, 239 - red total tint			#ffefef
+	225, 232, 237 - blue header tint		#e1e8ed
+
+	255, 232, 192 - orange button			#ffe8c0
+	202, 103, 96  - orange button outline	#ca6760
+
+	20,123,141    - '+' icon tint			#147b8d
+
+*/
+
+.no-bold {
+	font-weight: normal !important;
+}
+
+.row{
+	margin-bottom: 3mm;
+}
