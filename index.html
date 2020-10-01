@@ -20,12 +20,12 @@
     <div class="content">
         Select Action
         &nbsp;&nbsp;
-        <input type="radio" id="new" name="payment-method" value="new" checked>
+        <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
         <label for="new" class="no-bold">
             Add New Payment
         </label>
         &nbsp;&nbsp;&nbsp;
-        <input type="radio" id="pending" name="payment-method" value="pending">
+        <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
         <label for="pending" class="no-bold">
             Apply Pending Credits
         </label>
@@ -94,30 +94,80 @@
                         <!--</div>-->
                     </div>
                     <!--Amount Details-->
-                    <div class="col">
-                            <form>
+                    <div class="col-md-6">
+                        <br />
+                        <form>
                             <div class="row">
-                                <div class="form-group">
-                                    <label for="payment_amt" class="col-sm-2">
-                                        Payment Amount*
-                                    </label>
-                                    <input type="number" class="col-sm-1" id="payment_amt" placeholder="10.00">
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Payment Amount*</label>
                                 </div>
-                            
-                                <div class="form-group">
-                                    <label for="payment_date" class="col-sm-1">
-                                        Payment Date*
-                                    </label>
-                                    <input type="date" class="col-sm-1" id="date" placeholder="MM-DD-YYYY">
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" placeholder="10.00">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Payment Date*</label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Location*</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Sand Lake Avenue</option>
+                                        <option>City of Light</option>
+                                        <option>Readers Junction</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Payment Type*</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Credit/Debit Card - VISA</option>
+                                        <option>Net Banking</option>
+                                        <option>UPI Payment</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label class="no-bold">Payment Type*</label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" placeholder="21321313">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Provider</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>JayKV</option>
+                                        <option>Doe Jean</option>
+                                        <option>Ezra Boeson</option>
+                                        <option>Jaiden Kolodziej</option>
+                                        <option>Phoebe Marrs</option>
+                                        <option>Iqbal Ahammed</option>
+                                        <option>Innocent</option>
+                                        <option>Fathima Knight</option>
+                                        <option>Cecil Ramjan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="no-bold">Notes</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="3" placeholder="Enter Remarks Here" required></textarea>
                                 </div>
                             </div>
                         </form>
-                        Location*
-
-                        Payment Type*
-                        Reference No*
-                        Provider
-                        Notes
                     </div>
                 </div>
             </div>
