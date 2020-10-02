@@ -2,14 +2,8 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slider</title>
     <link href="main.css" rel="stylesheet" />
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
 </head>
 <body>
     <div class="bar">
@@ -19,14 +13,15 @@
     <!--Action Radio Buttons-->
     <div class="content">
         Select Action
-        &nbsp;&nbsp;
+        
         <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
-        <label for="new" class="no-bold">
+        <label for="new">
             Add New Payment
         </label>
-        &nbsp;&nbsp;&nbsp;
+        
+        &nbsp;&nbsp; 
         <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
-        <label for="pending" class="no-bold">
+        <label for="pending">
             Apply Pending Credits
         </label>
         <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
@@ -39,137 +34,106 @@
         <!--Step 1-->
         <div>
             Step 1: Collect Payment from patient<br />
-            <div class="container-fluid">
-                <div class="row">
+            <div>
+                <div class="s1-container">
                     <!--Grey Box-->
-                    <div class="greybox col-md-5">
-                        <!--<div class="container">-->
-                            <div class="row">
-                                <div class="col-sm-5" style="font-weight:bold;">
-                                    Balance Summary
-                                </div>
+                    <div class="greybox">
+                        <div style="font-weight:bold;">
+                            Balance Summary
+                        </div><br />
+                        <div class="greybox-grid">
+                            <div>
+                                Todays Account Charges
                             </div>
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    Todays Account Charges
-                                </div>
-                                <div class="col-sm-5">
-                                    : $20.00
-                                </div>
+                            <div>
+                                : $20.00
                             </div>
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    Total Account Balance
-                                </div>
-                                <div class="col-sm-5">
-                                    : $172.20
-                                </div>
+                            <div>
+                                Total Account Balance
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <hr class="cust" />
-                                </div>
+                            <div>
+                                : $172.20
                             </div>
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    Unapplied Credits
-                                </div>
-                                <div class="col-sm-5">
-                                    : $253.00
-                                </div>
+                        </div>
+                        <hr class="greybox-hr" />
+                        <div class="greybox-grid">
+                            <div>
+                                Unapplied Credits
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <hr class="cust" />
-                                </div>
+                            <div>
+                                : $253.00
                             </div>
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    Net Account Payable
-                                </div>
-                                <div class="col-sm-5">
-                                    : $0.00
-                                </div>
+                        </div>
+                        <hr class="greybox-hr" />
+                        <div class="greybox-grid">
+                            <div>
+                                Net Account Payable
                             </div>
-                        <!--</div>-->
-                    </div>
+                            <div>
+                                : $0.00
+                            </div>
+                        </div>
+                        <br /><br /><br />
+                        <br /><br /></div>
                     <!--Amount Details-->
-                    <div class="col-md-6">
-                        <br />
-                        <form>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Payment Amount*</label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <input type="number" class="form-control" placeholder="10.00">
-                                </div>
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Payment Date*</label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <input type="date" class="form-control" placeholder="Last name">
-                                </div>
+                    <div>
+                        <br /><br />
+                        <form class="pay-container">
+                            <label style="flex: auto;">
+                                Payment Amount
+                            </label>
+                            <div>
+                                <input style="flex: none;" type="number" placeholder="10.00">
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <label style="flex: auto;">
+                                    Payment Date* &nbsp; &nbsp;
+                                </label>
+                                <input style="flex: none;" type="date" placeholder="Last name">
                             </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Location*</label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Sand Lake Avenue</option>
-                                        <option>City of Light</option>
-                                        <option>Readers Junction</option>
-                                    </select>
-                                </div>
+                            <label style="flex: auto;">
+                                Location*
+                            </label>
+                            <select id="city">
+                                <option>Sand Lake Avenue</option>
+                                <option>City of Light</option>
+                                <option>Readers Junction</option>
+                            </select>
+                            <label style="flex: auto;">
+                                Payment Type*
+                            </label>
+                            <div>
+                                <select id="exampleFormControlSelect1">
+                                    <option>Credit/Debit Card - VISA</option>
+                                    <option>Net Banking</option>
+                                    <option>UPI Payment</option>
+                                </select>
+                                <label style="flex: auto;">
+                                    &nbsp;&nbsp;&nbsp; Reference No*
+                                </label>
+                                <input type="text" placeholder="21321313">
                             </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Payment Type*</label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Credit/Debit Card - VISA</option>
-                                        <option>Net Banking</option>
-                                        <option>UPI Payment</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-2">
-                                    <label class="no-bold">Payment Type*</label>
-                                </div>
-                                <div class="col-sm-2">
-                                    <input type="text" class="form-control" placeholder="21321313">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Provider</label>
-                                </div>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>JayKV</option>
-                                        <option>Doe Jean</option>
-                                        <option>Ezra Boeson</option>
-                                        <option>Jaiden Kolodziej</option>
-                                        <option>Phoebe Marrs</option>
-                                        <option>Iqbal Ahammed</option>
-                                        <option>Innocent</option>
-                                        <option>Fathima Knight</option>
-                                        <option>Cecil Ramjan</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <label class="no-bold">Notes</label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <textarea class="form-control" rows="3" placeholder="Enter Remarks Here" required></textarea>
-                                </div>
-                            </div>
+                            <label>
+                                Provider
+                            </label>
+                            <select id="exampleFormControlSelect1">
+                                <option>JayKV</option>
+                                <option>Doe Jean</option>
+                                <option>Ezra Boeson</option>
+                                <option>Jaiden Kolodziej</option>
+                                <option>Phoebe Marrs</option>
+                                <option>Iqbal Ahammed</option>
+                                <option>Innocent</option>
+                                <option>Fathima Knight</option>
+                                <option>Cecil Ramjan</option>
+                            </select>
+                            <label>
+                                Notes
+                            </label>
+                            <textarea rows="3" placeholder="Enter Remarks Here" required></textarea>
                         </form>
                     </div>
                 </div>
+                <br />
             </div>
         </div>
 
@@ -177,6 +141,7 @@
         
         <!--Step 2-->
         <div>
+            <br />
             Step 2: Select the procedure codes to post payments to
         </div>
     </div>

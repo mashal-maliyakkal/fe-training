@@ -5,13 +5,16 @@
 	padding : 2mm;
 }
 
-/* todo : !important omitable? */
 body {
-	color: rgb(68, 81, 92) !important;
+	font-family: 'Open Sans', sans-serif;
+	font-size: small;
+	color: rgb(68, 81, 92);
+	margin: 0px;
 }
-hr.cust {
+
+hr {
 	border: none;
-	height: 1.5px;
+	height: 2px;
 	background-color: rgb(213,213,213);
 	margin: 0px;
 }
@@ -19,8 +22,20 @@ hr.cust {
 .greybox {
 	background: #efefef;
 	border-radius: 7px;
-	padding: 15px;
+	padding: 20px;
 	margin: 3mm;
+}
+
+.greybox-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 20px;
+}
+
+.greybox-hr {
+
+	margin-top: 13px;
+	margin-bottom: 13px;
 }
 
 /* rename to margin */
@@ -40,10 +55,32 @@ hr.cust {
 	float: right;
 }
 
+input, select, textarea{
+	border: 1.5px solid rgb(213,213,213);
+	border-radius: 7px;
+	padding: 5px;
+}
+
+select{
+	width: 300px;
+}
+
+textarea{
+	width: 500px;
+}
+
+input:focus, select:focus, textarea:focus{
+	outline: none;
+	border-color: dodgerblue;
+}
+
 /*
+	font - Helvetica Neue
+
 	colours
 
 	68, 81, 92    - font
+				  - topbar teal				#147b8d
 
 	239, 239, 239 - grey box				#efefef
 	196, 196, 196 - hint text				#c4c4c4
@@ -57,10 +94,16 @@ hr.cust {
 
 */
 
-.no-bold {
-	font-weight: normal !important;
+.s1-container {
+	display: grid;
+	grid-template-columns: 4fr 6fr;
+	column-gap: 40px;
 }
 
-.row{
-	margin-bottom: 3mm;
+.pay-container {
+	display: grid;
+	grid-template-columns: 1fr 7fr;
+	column-gap: 15px;
+	grid-row-gap: 10px;
 }
+
