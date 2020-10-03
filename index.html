@@ -80,18 +80,18 @@
                         <br /><br />
                         <form class="pay-container">
                             <label style="flex: auto;">
-                                Payment Amount*
+                                Payment Amount<span>*</span>
                             </label>
                             <div>
                                 <input style="flex: none;" type="number" placeholder="10.00" class="pay-det">
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 <label style="flex: auto;">
-                                    Payment Date* &nbsp; &nbsp;
+                                    Payment Date<span>*</span> &nbsp; &nbsp;
                                 </label>
                                 <input style="flex: none;" type="date" placeholder="Last name" class="pay-det">
                             </div>
                             <label style="flex: auto;">
-                                Location*
+                                Location<span>*</span>
                             </label>
                             <select id="city">
                                 <option>Sand Lake Avenue</option>
@@ -99,7 +99,7 @@
                                 <option>Readers Junction</option>
                             </select>
                             <label style="flex: auto;">
-                                Payment Type*
+                                Payment Type<span>*</span>
                             </label>
                             <div>
                                 <select id="exampleFormControlSelect1">
@@ -108,9 +108,9 @@
                                     <option>UPI Payment</option>
                                 </select>
                                 <label style="flex: auto;">
-                                    &nbsp;&nbsp;&nbsp; Reference No* &nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp; Reference No<span>*</span> &nbsp;&nbsp;
                                 </label>
-                                <input class="pay-det" type="text" placeholder="21321313">
+                                <input id="iref_no" class="pay-det" type="text" placeholder="21321313">
                             </div>
                             <label>
                                 Provider
@@ -127,7 +127,7 @@
                                 <option>Cecil Ramjan</option>
                             </select>
                             <label>
-                                Notes
+                                Notes<br /><br /><br />
                             </label>
                             <textarea rows="3" placeholder="Enter Remarks Here" required></textarea>
                         </form>
@@ -157,99 +157,99 @@
                 <br />
                 <div class="proc-code-grid">
                     <!--Header-->
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         <input type="checkbox" checked />
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         DOS
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Code
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Allowed Amt.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Bal. Due Pat.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Bal. Due Ins.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Payment Amt ($)
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         More
                     </div>
                     <!--Row 1-->
-                    <div class="proc-code-grid-item">
+                    <div>
                         <input type="checkbox" checked />
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         01/21/2019
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         D0140 - Limited Oral Eval Prob Focused
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $1244.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $20.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $0.00
                     </div>
                     <div class="pay-amt-grid-item">
                         <input type="number" value="0.00" class="pay-amt-box"/>
                     </div>
-                    <div class="proc-code-grid-item plus-icon-box">
+                    <div class=" plus-icon-box">
                         <div></div>
-                        <img src="blue-plus-icon.jpg" width="16" height="16" />
+                        <img src="blue-plus-icon.jpg" width="16" height="16"/>
                     </div>
                     <!--Row 2-->
-                    <div class="proc-code-grid-item">
+                    <div>
                         <input type="checkbox" checked />
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         01/21/2019
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         D8823 - Sample Code Created for demo purposes (Internal Use Only)
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $300.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $152.20
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $0.00
                     </div>
                     <div class="pay-amt-grid-item">
                         <input type="number" value="0.00" class="pay-amt-box"/>
                     </div>
-                    <div class="proc-code-grid-item plus-icon-box">
+                    <div class=" plus-icon-box">
                         <div>&nbsp;</div>
                         <img src="blue-plus-icon.jpg" width="16" height="16" />
                     </div>
                     <!--Total Row-->
-                    <div class="total-box proc-code-total proc-code-grid-item">
+                    <div class="total-box proc-code-total ">
                         Total
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $1544.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $172.20
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $0.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $0.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         &nbsp;
                     </div>
                 </div>
@@ -269,73 +269,73 @@
 
                 <div class="proc-code-grid">
                     <!--Header-->
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         <input type="checkbox" checked />
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         DOS
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Code
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Allowed Amt.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Bal. Due Pat.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Bal. Due Ins.
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         Payment Amt ($)
                     </div>
-                    <div class="proc-code-grid-item proc-code-header">
+                    <div class=" proc-code-header">
                         More
                     </div>
                     <!--Row 1-->
-                    <div class="proc-code-grid-item">
+                    <div>
                         <input type="checkbox" checked />
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         01/21/2019
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         D0140 - Limited Oral Eval Prob Focused
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $1244.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $20.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div>
                         $0.00
                     </div>
-                    <div class="proc-code-grid-item">
+                    <div class="pay-amt-grid-item">
                         <input type="number" value="0.00" class="pay-amt-box" />
                     </div>
-                    <div class="proc-code-grid-item plus-icon-box">
+                    <div class=" plus-icon-box">
                         <div></div>
                         <img src="blue-plus-icon.jpg" width="16" height="16"/>
                     </div>
                     <!--Total Row-->
-                    <div class="total-box proc-code-total proc-code-grid-item">
+                    <div class="total-box proc-code-total ">
                         Total
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $1544.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $172.20
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $0.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         $0.00
                     </div>
-                    <div class="proc-code-total proc-code-grid-item">
+                    <div class="proc-code-total ">
                         &nbsp;
                     </div>
                 </div>

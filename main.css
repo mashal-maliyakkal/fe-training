@@ -50,7 +50,7 @@ hr {
 	outline: auto;
 	outline-color: #ca6760;
 	margin: 20px;
-	padding: 7px;
+	padding: 6px;
 	color: #000000;
 	float: right;
 }
@@ -75,7 +75,9 @@ input:focus, select:focus, textarea:focus{
 	border-color: dodgerblue;
 }
 
-
+label > span{
+	color:red;
+}
 
 /*
 	font - Helvetica Neue
@@ -117,14 +119,11 @@ input:focus, select:focus, textarea:focus{
 	display: grid;
 	grid-template-columns: 40px 1fr minmax(600px,auto) repeat(5,1fr);
 	width: 100%;
-/*	grid-gap: 1px 1px;*/
 }
 
-.proc-code-grid-item {
+.proc-code-grid > div {
+	padding: 10px 3px 0px 5px;
 	border: 1px solid rgb(218,218,218);
-	padding: 6px;
-/*	center vertically*/
-/*	margin: auto 0 */
 }
 
 .proc-code-header {
@@ -133,6 +132,7 @@ input:focus, select:focus, textarea:focus{
 }
 
 .proc-code-total {
+	padding: 5px 3px 5px 5px !important;
 	background: #ffefef;
 }
 
@@ -143,17 +143,21 @@ input:focus, select:focus, textarea:focus{
 }
 
 .pay-amt-grid-item {
-	border: 1px solid rgb(218,218,218);
-	padding: 2px;
+	padding: 7px 3px 5px 5px!important;
+	background: #ffffff;
 }
 
 .pay-amt-box {
-	width:100px;
+	width: 100px;
+	height: 15px;
+	margin-bottom: 0px;
+	/*	float:right;*/
 }
 
 .plus-icon-box {
 	display: grid;
 	grid-template-columns: 1fr 16px 1fr;
+	padding: 5px 3px 0px 5px !important;
 }
 
 /* Check Box Styling */
@@ -167,6 +171,8 @@ input[type="checkbox"] {
 	border-radius: 3px;
 	display: inline-block;
 	position: relative;
+	margin: 0px 0px 0px 6px;
+/*	text-align:center;*/
 /*	margin-left: 4px;*/
 /*	margin-bottom: 0px;*/
 }
