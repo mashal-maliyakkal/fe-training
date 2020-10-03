@@ -80,15 +80,15 @@
                         <br /><br />
                         <form class="pay-container">
                             <label style="flex: auto;">
-                                Payment Amount
+                                Payment Amount*
                             </label>
                             <div>
-                                <input style="flex: none;" type="number" placeholder="10.00">
+                                <input style="flex: none;" type="number" placeholder="10.00" class="pay-det">
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 <label style="flex: auto;">
                                     Payment Date* &nbsp; &nbsp;
                                 </label>
-                                <input style="flex: none;" type="date" placeholder="Last name">
+                                <input style="flex: none;" type="date" placeholder="Last name" class="pay-det">
                             </div>
                             <label style="flex: auto;">
                                 Location*
@@ -108,9 +108,9 @@
                                     <option>UPI Payment</option>
                                 </select>
                                 <label style="flex: auto;">
-                                    &nbsp;&nbsp;&nbsp; Reference No*
+                                    &nbsp;&nbsp;&nbsp; Reference No* &nbsp;&nbsp;
                                 </label>
-                                <input type="text" placeholder="21321313">
+                                <input class="pay-det" type="text" placeholder="21321313">
                             </div>
                             <label>
                                 Provider
@@ -143,11 +143,211 @@
         <div>
             <br />
             Step 2: Select the procedure codes to post payments to
+            <br />
+            <div style="margin:10px;">
+                <!--Patient 1-->
+                <label style="font-weight:bold">
+                    Flinstone, Fred (10026244)
+                </label>
+                <div style="float:right;">
+                    <input type="checkbox" />
+                    Show codes without patient dues
+                </div>
+                <br />
+                <br />
+                <div class="proc-code-grid">
+                    <!--Header-->
+                    <div class="proc-code-grid-item proc-code-header">
+                        <input type="checkbox" checked />
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        DOS
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Code
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Allowed Amt.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Bal. Due Pat.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Bal. Due Ins.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Payment Amt ($)
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        More
+                    </div>
+                    <!--Row 1-->
+                    <div class="proc-code-grid-item">
+                        <input type="checkbox" checked />
+                    </div>
+                    <div class="proc-code-grid-item">
+                        01/21/2019
+                    </div>
+                    <div class="proc-code-grid-item">
+                        D0140 - Limited Oral Eval Prob Focused
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $1244.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $20.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="pay-amt-grid-item">
+                        <input type="number" value="0.00" class="pay-amt-box"/>
+                    </div>
+                    <div class="proc-code-grid-item plus-icon-box">
+                        <div></div>
+                        <img src="blue-plus-icon.jpg" width="16" height="16" />
+                    </div>
+                    <!--Row 2-->
+                    <div class="proc-code-grid-item">
+                        <input type="checkbox" checked />
+                    </div>
+                    <div class="proc-code-grid-item">
+                        01/21/2019
+                    </div>
+                    <div class="proc-code-grid-item">
+                        D8823 - Sample Code Created for demo purposes (Internal Use Only)
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $300.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $152.20
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="pay-amt-grid-item">
+                        <input type="number" value="0.00" class="pay-amt-box"/>
+                    </div>
+                    <div class="proc-code-grid-item plus-icon-box">
+                        <div>&nbsp;</div>
+                        <img src="blue-plus-icon.jpg" width="16" height="16" />
+                    </div>
+                    <!--Total Row-->
+                    <div class="total-box proc-code-total proc-code-grid-item">
+                        Total
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $1544.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $172.20
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <!--Patient 2-->
+                <label style="font-weight:bold">
+                    Flinstone, Wilma (10026245)
+                </label>
+                <div style="float:right;">
+                    <input type="checkbox" />
+                    Show codes without patient dues
+                </div>
+                <br />
+                <br />
+
+                <div class="proc-code-grid">
+                    <!--Header-->
+                    <div class="proc-code-grid-item proc-code-header">
+                        <input type="checkbox" checked />
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        DOS
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Code
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Allowed Amt.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Bal. Due Pat.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Bal. Due Ins.
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        Payment Amt ($)
+                    </div>
+                    <div class="proc-code-grid-item proc-code-header">
+                        More
+                    </div>
+                    <!--Row 1-->
+                    <div class="proc-code-grid-item">
+                        <input type="checkbox" checked />
+                    </div>
+                    <div class="proc-code-grid-item">
+                        01/21/2019
+                    </div>
+                    <div class="proc-code-grid-item">
+                        D0140 - Limited Oral Eval Prob Focused
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $1244.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $20.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="proc-code-grid-item">
+                        <input type="number" value="0.00" class="pay-amt-box" />
+                    </div>
+                    <div class="proc-code-grid-item plus-icon-box">
+                        <div></div>
+                        <img src="blue-plus-icon.jpg" width="16" height="16"/>
+                    </div>
+                    <!--Total Row-->
+                    <div class="total-box proc-code-total proc-code-grid-item">
+                        Total
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $1544.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $172.20
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        $0.00
+                    </div>
+                    <div class="proc-code-total proc-code-grid-item">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
         </div>
+            
     </div>
     
     <hr class="cust"/>
     <button class="submit">Add and Apply Payment</button>
+
+    <br /><br /><br /><br /><br />
 
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
