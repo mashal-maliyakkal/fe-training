@@ -6,347 +6,354 @@
     <link href="main.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="bar">
-        Add Patient Payment
-        <label style="float: right">X</label>
-    </div>
-    <!--Action Radio Buttons-->
-    <div class="content">
-        Select Action
-        
-        <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
-        <label for="new">
-            Add New Payment
-        </label>
-        
-        &nbsp;&nbsp; 
-        <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
-        <label for="pending">
-            Apply Pending Credits
-        </label>
-        <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
-    </div>
-    <!--<div id="date">Heregoes  </div>-->
+    <!-- Slider Content -->
+    <div id="slider" class="sidenav">
 
-    <hr class="cust"/>
-
-    <div class="content">
-        <!--Step 1-->
-        <div>
-            Step 1: Collect Payment from patient<br />
-            <div>
-                <div class="s1-container">
-                    <!--Grey Box-->
-                    <div class="greybox">
-                        <div style="font-weight:bold;">
-                            Balance Summary
-                        </div><br />
-                        <div class="greybox-grid">
-                            <div>
-                                Todays Account Charges
-                            </div>
-                            <div>
-                                : $20.00
-                            </div>
-                            <div>
-                                Total Account Balance
-                            </div>
-                            <div>
-                                : $172.20
-                            </div>
-                        </div>
-                        <hr class="greybox-hr" />
-                        <div class="greybox-grid">
-                            <div>
-                                Unapplied Credits
-                            </div>
-                            <div>
-                                : $253.00
-                            </div>
-                        </div>
-                        <hr class="greybox-hr" />
-                        <div class="greybox-grid">
-                            <div>
-                                Net Account Payable
-                            </div>
-                            <div>
-                                : $0.00
-                            </div>
-                        </div>
-                        <br /><br /><br />
-                        <br /><br /></div>
-                    <!--Amount Details-->
-                    <div>
-                        <br /><br />
-                        <form class="pay-container">
-                            <label style="flex: auto;">
-                                Payment Amount<span>*</span>
-                            </label>
-                            <div>
-                                <input id="ipay-amt" style="flex: none;" type="number" placeholder="10.00" class="pay-det">
-                                &nbsp; &nbsp; &nbsp; &nbsp;
-                                <label style="flex: auto;">
-                                    Payment Date<span>*</span> &nbsp; &nbsp;
-                                </label>
-                                <input id="ipay-date" style="flex: none;" type="date" placeholder="Last name" class="pay-det">
-                            </div>
-                            <label style="flex: auto;">
-                                Location<span>*</span>
-                            </label>
-                            <select id="i-city">
-                                <option>Sand Lake Avenue</option>
-                                <option>City of Light</option>
-                                <option>Readers Junction</option>
-                            </select>
-                            <label style="flex: auto;">
-                                Payment Type<span>*</span>
-                            </label>
-                            <div>
-                                <select id="ipay-type">
-                                    <option>Credit/Debit Card - VISA</option>
-                                    <option>Net Banking</option>
-                                    <option>UPI Payment</option>
-                                </select>
-                                <label style="flex: auto;">
-                                    &nbsp;&nbsp;&nbsp; Reference No<span>*</span> &nbsp;&nbsp;
-                                </label>
-                                <input id="iref-no" class="pay-det" type="text" placeholder="21321313">
-                            </div>
-                            <label>
-                                Provider
-                            </label>
-                            <select id="exampleFormControlSelect1">
-                                <option>JayKV</option>
-                                <option>Doe Jean</option>
-                                <option>Ezra Boeson</option>
-                                <option>Jaiden Kolodziej</option>
-                                <option>Phoebe Marrs</option>
-                                <option>Iqbal Ahammed</option>
-                                <option>Innocent</option>
-                                <option>Fathima Knight</option>
-                                <option>Cecil Ramjan</option>
-                            </select>
-                            <label>
-                                Notes<br /><br /><br />
-                            </label>
-                            <textarea rows="3" placeholder="Enter Remarks Here" required></textarea>
-                        </form>
-                    </div>
-                </div>
-                <br />
-            </div>
+        <div class="bar">
+            Add Patient Payment
+            <label style="float: right" onclick="closeSlider()">X</label>
         </div>
+        <!--Action Radio Buttons-->
+        <div class="content">
+            Select Action
+        
+            <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
+            <label for="new">
+                Add New Payment
+            </label>
+        
+            &nbsp;&nbsp; 
+            <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
+            <label for="pending">
+                Apply Pending Credits
+            </label>
+            <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
+        </div>
+        <!--<div id="date">Heregoes  </div>-->
 
         <hr class="cust"/>
+
+        <div class="content">
+            <!--Step 1-->
+            <div>
+                Step 1: Collect Payment from patient<br />
+                <div>
+                    <div class="s1-container">
+                        <!--Grey Box-->
+                        <div class="greybox">
+                            <div style="font-weight:bold;">
+                                Balance Summary
+                            </div><br />
+                            <div class="greybox-grid">
+                                <div>
+                                    Todays Account Charges
+                                </div>
+                                <div>
+                                    : $20.00
+                                </div>
+                                <div>
+                                    Total Account Balance
+                                </div>
+                                <div>
+                                    : $172.20
+                                </div>
+                            </div>
+                            <hr class="greybox-hr" />
+                            <div class="greybox-grid">
+                                <div>
+                                    Unapplied Credits
+                                </div>
+                                <div>
+                                    : $253.00
+                                </div>
+                            </div>
+                            <hr class="greybox-hr" />
+                            <div class="greybox-grid">
+                                <div>
+                                    Net Account Payable
+                                </div>
+                                <div>
+                                    : $0.00
+                                </div>
+                            </div>
+                            <br /><br /><br />
+                            <br /><br /></div>
+                        <!--Amount Details-->
+                        <div>
+                            <br /><br />
+                            <form class="pay-container">
+                                <label style="flex: auto;">
+                                    Payment Amount<span>*</span>
+                                </label>
+                                <div>
+                                    <input id="ipay-amt" style="flex: none;" type="number" placeholder="10.00" class="pay-det">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <label style="flex: auto;">
+                                        Payment Date<span>*</span> &nbsp; &nbsp;
+                                    </label>
+                                    <input id="ipay-date" style="flex: none;" type="date" placeholder="Last name" class="pay-det">
+                                </div>
+                                <label style="flex: auto;">
+                                    Location<span>*</span>
+                                </label>
+                                <select id="i-city">
+                                    <option>Sand Lake Avenue</option>
+                                    <option>City of Light</option>
+                                    <option>Readers Junction</option>
+                                </select>
+                                <label style="flex: auto;">
+                                    Payment Type<span>*</span>
+                                </label>
+                                <div>
+                                    <select id="ipay-type">
+                                        <option>Credit/Debit Card - VISA</option>
+                                        <option>Net Banking</option>
+                                        <option>UPI Payment</option>
+                                    </select>
+                                    <label style="flex: auto;">
+                                        &nbsp;&nbsp;&nbsp; Reference No<span>*</span> &nbsp;&nbsp;
+                                    </label>
+                                    <input id="iref-no" class="pay-det" type="text" placeholder="21321313">
+                                </div>
+                                <label>
+                                    Provider
+                                </label>
+                                <select id="exampleFormControlSelect1">
+                                    <option>JayKV</option>
+                                    <option>Doe Jean</option>
+                                    <option>Ezra Boeson</option>
+                                    <option>Jaiden Kolodziej</option>
+                                    <option>Phoebe Marrs</option>
+                                    <option>Iqbal Ahammed</option>
+                                    <option>Innocent</option>
+                                    <option>Fathima Knight</option>
+                                    <option>Cecil Ramjan</option>
+                                </select>
+                                <label>
+                                    Notes<br /><br /><br />
+                                </label>
+                                <textarea rows="3" placeholder="Enter Remarks Here" required></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <hr class="cust"/>
         
-        <!--Step 2-->
-        <div>
-            <br />
-            Step 2: Select the procedure codes to post payments to
-            <br />
-            <div style="margin:10px;">
-                <!--Patient 1-->
-                <label style="font-weight:bold">
-                    Flinstone, Fred (10026244)
-                </label>
-                <div style="float:right;">
-                    <input type="checkbox" />
-                    Show codes without patient dues
-                </div>
+            <!--Step 2-->
+            <div>
                 <br />
+                Step 2: Select the procedure codes to post payments to
                 <br />
-                <div class="proc-code-grid">
-                    <!--Header-->
-                    <div class=" proc-code-header">
-                        <input type="checkbox" checked />
+                <div style="margin:10px;">
+                    <!--Patient 1-->
+                    <label style="font-weight:bold">
+                        Flinstone, Fred (10026244)
+                    </label>
+                    <div style="float:right;">
+                        <input type="checkbox" />
+                        Show codes without patient dues
                     </div>
-                    <div class=" proc-code-header">
-                        DOS
+                    <br />
+                    <br />
+                    <div class="proc-code-grid">
+                        <!--Header-->
+                        <div class=" proc-code-header">
+                            <input type="checkbox" checked />
+                        </div>
+                        <div class=" proc-code-header">
+                            DOS
+                        </div>
+                        <div class=" proc-code-header">
+                            Code
+                        </div>
+                        <div class=" proc-code-header">
+                            Allowed Amt.
+                        </div>
+                        <div class=" proc-code-header">
+                            Bal. Due Pat.
+                        </div>
+                        <div class=" proc-code-header">
+                            Bal. Due Ins.
+                        </div>
+                        <div class=" proc-code-header">
+                            Payment Amt ($)
+                        </div>
+                        <div class=" proc-code-header">
+                            More
+                        </div>
+                        <!--Row 1-->
+                        <div>
+                            <input type="checkbox" checked />
+                        </div>
+                        <div>
+                            01/21/2019
+                        </div>
+                        <div>
+                            D0140 - Limited Oral Eval Prob Focused
+                        </div>
+                        <div>
+                            $1244.00
+                        </div>
+                        <div>
+                            $20.00
+                        </div>
+                        <div>
+                            $0.00
+                        </div>
+                        <div class="pay-amt-grid-item">
+                            <input type="number" value="0.00" class="pay-amt-box"/>
+                        </div>
+                        <div class=" plus-icon-box">
+                            <div></div>
+                            <img src="blue-plus-icon.jpg" width="16" height="16"/>
+                        </div>
+                        <!--Row 2-->
+                        <div>
+                            <input type="checkbox" checked />
+                        </div>
+                        <div>
+                            01/21/2019
+                        </div>
+                        <div>
+                            D8823 - Sample Code Created for demo purposes (Internal Use Only)
+                        </div>
+                        <div>
+                            $300.00
+                        </div>
+                        <div>
+                            $152.20
+                        </div>
+                        <div>
+                            $0.00
+                        </div>
+                        <div class="pay-amt-grid-item">
+                            <input type="number" value="0.00" class="pay-amt-box"/>
+                        </div>
+                        <div class=" plus-icon-box">
+                            <div>&nbsp;</div>
+                            <img src="blue-plus-icon.jpg" width="16" height="16" />
+                        </div>
+                        <!--Total Row-->
+                        <div class="total-box proc-code-total ">
+                            Total
+                        </div>
+                        <div class="proc-code-total ">
+                            $1544.00
+                        </div>
+                        <div class="proc-code-total ">
+                            $172.20
+                        </div>
+                        <div class="proc-code-total ">
+                            $0.00
+                        </div>
+                        <div class="proc-code-total ">
+                            $0.00
+                        </div>
+                        <div class="proc-code-total ">
+                            &nbsp;
+                        </div>
                     </div>
-                    <div class=" proc-code-header">
-                        Code
-                    </div>
-                    <div class=" proc-code-header">
-                        Allowed Amt.
-                    </div>
-                    <div class=" proc-code-header">
-                        Bal. Due Pat.
-                    </div>
-                    <div class=" proc-code-header">
-                        Bal. Due Ins.
-                    </div>
-                    <div class=" proc-code-header">
-                        Payment Amt ($)
-                    </div>
-                    <div class=" proc-code-header">
-                        More
-                    </div>
-                    <!--Row 1-->
-                    <div>
-                        <input type="checkbox" checked />
-                    </div>
-                    <div>
-                        01/21/2019
-                    </div>
-                    <div>
-                        D0140 - Limited Oral Eval Prob Focused
-                    </div>
-                    <div>
-                        $1244.00
-                    </div>
-                    <div>
-                        $20.00
-                    </div>
-                    <div>
-                        $0.00
-                    </div>
-                    <div class="pay-amt-grid-item">
-                        <input type="number" value="0.00" class="pay-amt-box"/>
-                    </div>
-                    <div class=" plus-icon-box">
-                        <div></div>
-                        <img src="blue-plus-icon.jpg" width="16" height="16"/>
-                    </div>
-                    <!--Row 2-->
-                    <div>
-                        <input type="checkbox" checked />
-                    </div>
-                    <div>
-                        01/21/2019
-                    </div>
-                    <div>
-                        D8823 - Sample Code Created for demo purposes (Internal Use Only)
-                    </div>
-                    <div>
-                        $300.00
-                    </div>
-                    <div>
-                        $152.20
-                    </div>
-                    <div>
-                        $0.00
-                    </div>
-                    <div class="pay-amt-grid-item">
-                        <input type="number" value="0.00" class="pay-amt-box"/>
-                    </div>
-                    <div class=" plus-icon-box">
-                        <div>&nbsp;</div>
-                        <img src="blue-plus-icon.jpg" width="16" height="16" />
-                    </div>
-                    <!--Total Row-->
-                    <div class="total-box proc-code-total ">
-                        Total
-                    </div>
-                    <div class="proc-code-total ">
-                        $1544.00
-                    </div>
-                    <div class="proc-code-total ">
-                        $172.20
-                    </div>
-                    <div class="proc-code-total ">
-                        $0.00
-                    </div>
-                    <div class="proc-code-total ">
-                        $0.00
-                    </div>
-                    <div class="proc-code-total ">
-                        &nbsp;
-                    </div>
-                </div>
 
-                <br />
-                <br />
-                <!--Patient 2-->
-                <label style="font-weight:bold">
-                    Flinstone, Wilma (10026245)
-                </label>
-                <div style="float:right;">
-                    <input type="checkbox" />
-                    Show codes without patient dues
-                </div>
-                <br />
-                <br />
+                    <br />
+                    <br />
+                    <!--Patient 2-->
+                    <label style="font-weight:bold">
+                        Flinstone, Wilma (10026245)
+                    </label>
+                    <div style="float:right;">
+                        <input type="checkbox" />
+                        Show codes without patient dues
+                    </div>
+                    <br />
+                    <br />
 
-                <div class="proc-code-grid">
-                    <!--Header-->
-                    <div class=" proc-code-header">
-                        <input type="checkbox" checked />
-                    </div>
-                    <div class=" proc-code-header">
-                        DOS
-                    </div>
-                    <div class=" proc-code-header">
-                        Code
-                    </div>
-                    <div class=" proc-code-header">
-                        Allowed Amt.
-                    </div>
-                    <div class=" proc-code-header">
-                        Bal. Due Pat.
-                    </div>
-                    <div class=" proc-code-header">
-                        Bal. Due Ins.
-                    </div>
-                    <div class=" proc-code-header">
-                        Payment Amt ($)
-                    </div>
-                    <div class=" proc-code-header">
-                        More
-                    </div>
-                    <!--Row 1-->
-                    <div>
-                        <input type="checkbox" checked />
-                    </div>
-                    <div>
-                        01/21/2019
-                    </div>
-                    <div>
-                        D0140 - Limited Oral Eval Prob Focused
-                    </div>
-                    <div>
-                        $1244.00
-                    </div>
-                    <div>
-                        $20.00
-                    </div>
-                    <div>
-                        $0.00
-                    </div>
-                    <div class="pay-amt-grid-item">
-                        <input type="number" value="0.00" class="pay-amt-box" />
-                    </div>
-                    <div class=" plus-icon-box">
-                        <div></div>
-                        <img src="blue-plus-icon.jpg" width="16" height="16"/>
-                    </div>
-                    <!--Total Row-->
-                    <div class="total-box proc-code-total ">
-                        Total
-                    </div>
-                    <div class="proc-code-total ">
-                        $1544.00
-                    </div>
-                    <div class="proc-code-total ">
-                        $172.20
-                    </div>
-                    <div class="proc-code-total ">
-                        $0.00
-                    </div>
-                    <div class="proc-code-total ">
-                        $0.00
-                    </div>
-                    <div class="proc-code-total ">
-                        &nbsp;
+                    <div class="proc-code-grid">
+                        <!--Header-->
+                        <div class=" proc-code-header">
+                            <input type="checkbox" checked />
+                        </div>
+                        <div class=" proc-code-header">
+                            DOS
+                        </div>
+                        <div class=" proc-code-header">
+                            Code
+                        </div>
+                        <div class=" proc-code-header">
+                            Allowed Amt.
+                        </div>
+                        <div class=" proc-code-header">
+                            Bal. Due Pat.
+                        </div>
+                        <div class=" proc-code-header">
+                            Bal. Due Ins.
+                        </div>
+                        <div class=" proc-code-header">
+                            Payment Amt ($)
+                        </div>
+                        <div class=" proc-code-header">
+                            More
+                        </div>
+                        <!--Row 1-->
+                        <div>
+                            <input type="checkbox" checked />
+                        </div>
+                        <div>
+                            01/21/2019
+                        </div>
+                        <div>
+                            D0140 - Limited Oral Eval Prob Focused
+                        </div>
+                        <div>
+                            $1244.00
+                        </div>
+                        <div>
+                            $20.00
+                        </div>
+                        <div>
+                            $0.00
+                        </div>
+                        <div class="pay-amt-grid-item">
+                            <input type="number" value="0.00" class="pay-amt-box" />
+                        </div>
+                        <div class=" plus-icon-box">
+                            <div></div>
+                            <img src="blue-plus-icon.jpg" width="16" height="16"/>
+                        </div>
+                        <!--Total Row-->
+                        <div class="total-box proc-code-total ">
+                            Total
+                        </div>
+                        <div class="proc-code-total ">
+                            $1544.00
+                        </div>
+                        <div class="proc-code-total ">
+                            $172.20
+                        </div>
+                        <div class="proc-code-total ">
+                            $0.00
+                        </div>
+                        <div class="proc-code-total ">
+                            $0.00
+                        </div>
+                        <div class="proc-code-total ">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
             
-    </div>
+        </div>
     
-    <hr class="cust"/>
-    <button class="submit" onclick="submit()">Add and Apply Payment</button>
-    <br /><br /><br /><br /><br />
+        <hr class="cust"/>
+        <button class="submit" onclick="submit()">Add and Apply Payment</button>
+        <br /><br /><br /><br /><br />
+    </div>
+
+    <!-- Open Slider button -->
+    <button onclick="openSlider()" class="submit" style="float:none !important;">Submit Payment</button>
 
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>

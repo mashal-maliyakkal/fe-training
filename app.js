@@ -52,3 +52,13 @@ function submit() {
         alert("Invalid entries on :"+alertDialogue);
     }
 }
+
+function openSlider() {
+    document.getElementById("slider").style.width = "90%";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeSlider() {
+    document.getElementById("slider").style.width = "0";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+}
