@@ -83,17 +83,17 @@
                                 Payment Amount<span>*</span>
                             </label>
                             <div>
-                                <input style="flex: none;" type="number" placeholder="10.00" class="pay-det">
+                                <input id="ipay-amt" style="flex: none;" type="number" placeholder="10.00" class="pay-det">
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 <label style="flex: auto;">
                                     Payment Date<span>*</span> &nbsp; &nbsp;
                                 </label>
-                                <input style="flex: none;" type="date" placeholder="Last name" class="pay-det">
+                                <input id="ipay-date" style="flex: none;" type="date" placeholder="Last name" class="pay-det">
                             </div>
                             <label style="flex: auto;">
                                 Location<span>*</span>
                             </label>
-                            <select id="city">
+                            <select id="i-city">
                                 <option>Sand Lake Avenue</option>
                                 <option>City of Light</option>
                                 <option>Readers Junction</option>
@@ -102,7 +102,7 @@
                                 Payment Type<span>*</span>
                             </label>
                             <div>
-                                <select id="exampleFormControlSelect1">
+                                <select id="ipay-type">
                                     <option>Credit/Debit Card - VISA</option>
                                     <option>Net Banking</option>
                                     <option>UPI Payment</option>
@@ -110,7 +110,7 @@
                                 <label style="flex: auto;">
                                     &nbsp;&nbsp;&nbsp; Reference No<span>*</span> &nbsp;&nbsp;
                                 </label>
-                                <input id="iref_no" class="pay-det" type="text" placeholder="21321313">
+                                <input id="iref-no" class="pay-det" type="text" placeholder="21321313">
                             </div>
                             <label>
                                 Provider
@@ -345,8 +345,7 @@
     </div>
     
     <hr class="cust"/>
-    <button class="submit">Add and Apply Payment</button>
-
+    <button class="submit" onclick="submit()">Add and Apply Payment</button>
     <br /><br /><br /><br /><br />
 
     <script src="app.js"></script>

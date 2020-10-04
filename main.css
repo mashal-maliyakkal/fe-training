@@ -55,6 +55,12 @@ hr {
 	float: right;
 }
 
+.submit:hover{
+	background: #fbeed8;
+	outline-color: #d5837d;
+
+}
+
 input.pay-det, select, textarea{
 	border: 1.5px solid rgb(213,213,213);
 	border-radius: 5px;
