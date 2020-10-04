@@ -1,15 +1,6 @@
 'use strict'
-
-//let today = new Date();
-//let formatDate = today.toDateString();
-//let selectElement = document.getElementById('date');
-//selectElement.innerHTML = formatDate;
-
 // Get the element with id="myDIV" (a div), then get all elements inside div with class="example"
 //var x = document.getElementById("myDIV").querySelectorAll(".example"); 
-
-
-console.log("yeeha");
 
 function submit() {
     console.clear();
@@ -61,4 +52,23 @@ function openSlider() {
 function closeSlider() {
     document.getElementById("slider").style.width = "0";
     document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+}
+
+var modal = document.getElementById("idetails");
+var plusButtons = document.getElementsByTagName("img");
+
+for (let btn of plusButtons) {
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+}
+
+document.getElementById("modal-close").onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }

@@ -4,34 +4,40 @@
     <meta charset="utf-8">
     <title>Slider</title>
     <link href="main.css" rel="stylesheet" />
+
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
 </head>
 <body>
     <!-- Slider Content -->
-    <div id="slider" class="sidenav">
+    <div id="slider" class="slider">
 
         <div class="bar">
             Add Patient Payment
-            <label style="float: right" onclick="closeSlider()">X</label>
+            <label style="float: right;
+                    margin-top:-8px;
+                    font-size:28px;
+                    vertical-align:top;
+                    "
+                   onclick="closeSlider()">&times;</label>
         </div>
         <!--Action Radio Buttons-->
         <div class="content">
             Select Action
-        
+
             <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
             <label for="new">
                 Add New Payment
             </label>
-        
-            &nbsp;&nbsp; 
+
+            &nbsp;&nbsp;
             <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
             <label for="pending">
                 Apply Pending Credits
             </label>
             <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
         </div>
-        <!--<div id="date">Heregoes  </div>-->
 
-        <hr class="cust"/>
+        <hr class="cust" />
 
         <div class="content">
             <!--Step 1-->
@@ -77,7 +83,8 @@
                                 </div>
                             </div>
                             <br /><br /><br />
-                            <br /><br /></div>
+                            <br /><br />
+                        </div>
                         <!--Amount Details-->
                         <div>
                             <br /><br />
@@ -140,8 +147,8 @@
                 </div>
             </div>
 
-            <hr class="cust"/>
-        
+            <hr class="cust" />
+
             <!--Step 2-->
             <div>
                 <br />
@@ -204,11 +211,11 @@
                             $0.00
                         </div>
                         <div class="pay-amt-grid-item">
-                            <input type="number" value="0.00" class="pay-amt-box"/>
+                            <input type="number" value="0.00" class="pay-amt-box" />
                         </div>
                         <div class=" plus-icon-box">
                             <div></div>
-                            <img src="blue-plus-icon.jpg" width="16" height="16"/>
+                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
                         </div>
                         <!--Row 2-->
                         <div>
@@ -230,11 +237,11 @@
                             $0.00
                         </div>
                         <div class="pay-amt-grid-item">
-                            <input type="number" value="0.00" class="pay-amt-box"/>
+                            <input type="number" value="0.00" class="pay-amt-box" />
                         </div>
                         <div class=" plus-icon-box">
                             <div>&nbsp;</div>
-                            <img src="blue-plus-icon.jpg" width="16" height="16" />
+                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
                         </div>
                         <!--Total Row-->
                         <div class="total-box proc-code-total ">
@@ -320,7 +327,7 @@
                         </div>
                         <div class=" plus-icon-box">
                             <div></div>
-                            <img src="blue-plus-icon.jpg" width="16" height="16"/>
+                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
                         </div>
                         <!--Total Row-->
                         <div class="total-box proc-code-total ">
@@ -344,16 +351,52 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-    
-        <hr class="cust"/>
+
+        <hr class="cust" />
         <button class="submit" onclick="submit()">Add and Apply Payment</button>
-        <br /><br /><br /><br /><br />
+
     </div>
 
     <!-- Open Slider button -->
     <button onclick="openSlider()" class="submit" style="float:none !important;">Submit Payment</button>
+
+    <!-- Payment Details Modal Box -->
+    <div id="idetails" class="payment-details">
+        <div class="modal-content">
+            <div class="bar">
+                Balance Summary
+                <label style="float: right;margin-top:-8px;font-size:28px;vertical-align:top;"
+                       id="modal-close">&times;</label>
+            </div>
+
+            <div class="greybox-grid"
+                 style="padding: 17px;">
+                <div>Patient Amount</div>
+                <div>: $20.00</div>
+
+                <div>Insurance Amount</div>
+                <div>: $172.20</div>
+
+                <div>Total Fee</div>
+                <div>: $253.00</div>
+
+                <div>Patient Paid</div>
+                <div>: $0.00</div>
+
+                <div>Insurance Paid</div>
+                <div>: $20.00</div>
+
+                <div>Total Paid</div>
+                <div>: $172.20</div>
+
+                <div>Remaining Balance</div>
+                <div>: $253.00</div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
