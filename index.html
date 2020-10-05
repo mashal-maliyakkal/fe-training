@@ -5,20 +5,20 @@
     <title>Slider</title>
     <link href="main.css" rel="stylesheet" />
 
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+
+    <br />
+    <!-- Open Slider button -->
+    <button onclick="openSlider()" class="submit" style="float:none !important;">Submit Payment</button>
+
     <!-- Slider Content -->
     <div id="slider" class="slider">
 
         <div class="bar">
             Add Patient Payment
-            <label style="float: right;
-                    margin-top:-8px;
-                    font-size:28px;
-                    vertical-align:top;
-                    "
-                   onclick="closeSlider()">&times;</label>
+            <i onclick="closeSlider()" class="material-icons">close</i>
         </div>
         <!--Action Radio Buttons-->
         <div class="content">
@@ -28,7 +28,6 @@
             <label for="new">
                 Add New Payment
             </label>
-
             &nbsp;&nbsp;
             <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
             <label for="pending">
@@ -93,6 +92,7 @@
                                     Payment Amount<span>*</span>
                                 </label>
                                 <div>
+                                    <!-- todo $ text entry -->
                                     <input id="ipay-amt" style="flex: none;" type="number" placeholder="10.00" class="pay-det">
                                     &nbsp; &nbsp; &nbsp; &nbsp;
                                     <label style="flex: auto;">
@@ -214,8 +214,7 @@
                             <input type="number" value="0.00" class="pay-amt-box" />
                         </div>
                         <div class=" plus-icon-box">
-                            <div></div>
-                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
+                            <i class="material-icons">add_circle_outline</i>
                         </div>
                         <!--Row 2-->
                         <div>
@@ -240,8 +239,7 @@
                             <input type="number" value="0.00" class="pay-amt-box" />
                         </div>
                         <div class=" plus-icon-box">
-                            <div>&nbsp;</div>
-                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
+                            <i class="material-icons">add_circle_outline</i>
                         </div>
                         <!--Total Row-->
                         <div class="total-box proc-code-total ">
@@ -326,8 +324,7 @@
                             <input type="number" value="0.00" class="pay-amt-box" />
                         </div>
                         <div class=" plus-icon-box">
-                            <div></div>
-                            <img onclick="openDetails()" src="blue-plus-icon.jpg" width="16" height="16" />
+                            <i class="material-icons">add_circle_outline</i>
                         </div>
                         <!--Total Row-->
                         <div class="total-box proc-code-total ">
@@ -359,16 +356,12 @@
 
     </div>
 
-    <!-- Open Slider button -->
-    <button onclick="openSlider()" class="submit" style="float:none !important;">Submit Payment</button>
-
     <!-- Payment Details Modal Box -->
     <div id="idetails" class="payment-details">
         <div class="modal-content">
             <div class="bar">
                 Balance Summary
-                <label style="float: right;margin-top:-8px;font-size:28px;vertical-align:top;"
-                       id="modal-close">&times;</label>
+                <i id="modal-close" class="material-icons">close</i>
             </div>
 
             <div class="greybox-grid"

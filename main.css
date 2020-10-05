@@ -6,6 +6,13 @@
 	font-weight: bold;
 }
 
+.bar > i{
+	float: right;
+	font-size: 20px;
+	margin-top: -3px;
+	cursor: pointer;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
@@ -46,19 +53,24 @@ hr {
 }
 
 .submit {
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
 	background: #ffe8c0;
-	outline: auto;
-	outline-color: #ca6760;
-	margin: 20px 0px 0px 20px;
-	padding: 6px;
-	color: #000000;
+	margin: 10px 10px 0px 20px;
+	padding: 3px 6px 3px 6px;
+	outline: none;
+	cursor: pointer;
 	float: right;
+	color: #000;
+	background-color: #ffe8c0;
+	border-radius: 2px 2px;
+	border: 1.5px solid #ca6760;
 }
 
-.submit:hover{
-	background: #fbeed8;
-	outline-color: #d5837d;
-
+.submit:hover {
+	color: #fff;
+	background: #ca6760;
+	border-color: #ca6760;
 }
 
 input.pay-det, select, textarea{
@@ -67,13 +79,17 @@ input.pay-det, select, textarea{
 	padding: 5px;
 }
 
+input[type="radio"] {
+	cursor: pointer;
+}
+
 select{
 	width: 300px;
 }
 
 textarea {
 	width: 500px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 input:focus, select:focus, textarea:focus{
@@ -160,9 +176,15 @@ label > span{
 }
 
 .plus-icon-box {
-	display: grid;
-	grid-template-columns: 1fr 16px 1fr;
-	padding: 5px 3px 0px 5px !important;
+	padding: 5px 5px 0px 5px !important;
+	text-align:center;
+}
+
+.plus-icon-box > i {
+	cursor: pointer;
+	margin-top:2px;
+	font-size: 18px;
+	color: #147b8d
 }
 
 /* Payment Info Modal Box*/
@@ -201,6 +223,7 @@ input[type="checkbox"] {
 	display: inline-block;
 	position: relative;
 	margin: 0px 0px 0px 6px;
+	cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
