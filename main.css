@@ -9,11 +9,11 @@
 .bar > i{
 	float: right;
 	font-size: 20px;
+	margin-top: -3px;
 	cursor: pointer;
 }
 
 input[type="radio"] {
-	margin-top: -1px;
 	vertical-align: middle;
 	margin-left: 10px;
 }
