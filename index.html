@@ -25,15 +25,14 @@
             Select Action
 
             <input type="radio" id="new" name="payment-method" value="new" class="custom-control-input" checked>
-            <label for="new">
+            <label>
                 Add New Payment
             </label>
-            &nbsp;&nbsp;
             <input type="radio" id="pending" name="payment-method" value="pending" class="custom-control-input">
-            <label for="pending">
+            <label>
                 Apply Pending Credits
             </label>
-            <a style="color:red;">(Patient has $253.00 in unapplied credits)</a>
+            <a style="color:rgb(255,0,0);">(Patient has $253.00 in unapplied credits)</a>
         </div>
 
         <hr class="cust" />
@@ -46,9 +45,10 @@
                     <div class="s1-container">
                         <!--Grey Box-->
                         <div class="greybox">
-                            <div style="font-weight:bold;">
+                            <div class="bold-heading">
                                 Balance Summary
-                            </div><br />
+                            </div>
+                            <br />
                             <div class="greybox-grid">
                                 <div>
                                     Todays Account Charges
@@ -81,26 +81,23 @@
                                     : $0.00
                                 </div>
                             </div>
-                            <br /><br /><br />
-                            <br /><br />
                         </div>
                         <!--Amount Details-->
                         <div>
                             <br /><br />
                             <form class="pay-container">
-                                <label style="flex: auto;">
+                                <label>
                                     Payment Amount<span>*</span>
                                 </label>
                                 <div>
-                                    <!-- todo $ text entry -->
-                                    <input id="ipay-amt" style="flex: none;" type="number" placeholder="10.00" class="pay-det">
-                                    &nbsp; &nbsp; &nbsp; &nbsp;
-                                    <label style="flex: auto;">
-                                        Payment Date<span>*</span> &nbsp; &nbsp;
+                                    <input id="ipay-amt" type="number" placeholder="10.00" 
+                                        class="pay-det"/>
+                                    <label class="pad-left">
+                                        Payment Date<span>*</span>
                                     </label>
-                                    <input id="ipay-date" style="flex: none;" type="date" placeholder="Last name" class="pay-det">
+                                    <input id="ipay-date" type="date" class="pay-det">
                                 </div>
-                                <label style="flex: auto;">
+                                <label>
                                     Location<span>*</span>
                                 </label>
                                 <select id="i-city">
@@ -108,7 +105,7 @@
                                     <option>City of Light</option>
                                     <option>Readers Junction</option>
                                 </select>
-                                <label style="flex: auto;">
+                                <label>
                                     Payment Type<span>*</span>
                                 </label>
                                 <div>
@@ -117,15 +114,15 @@
                                         <option>Net Banking</option>
                                         <option>UPI Payment</option>
                                     </select>
-                                    <label style="flex: auto;">
-                                        &nbsp;&nbsp;&nbsp; Reference No<span>*</span> &nbsp;&nbsp;
+                                    <label>
+                                        Reference No<span>*</span>
                                     </label>
                                     <input id="iref-no" class="pay-det" type="text" placeholder="21321313">
                                 </div>
                                 <label>
                                     Provider
                                 </label>
-                                <select id="exampleFormControlSelect1">
+                                <select id="ProviderSelect">
                                     <option>JayKV</option>
                                     <option>Doe Jean</option>
                                     <option>Ezra Boeson</option>
@@ -154,12 +151,12 @@
                 <br />
                 Step 2: Select the procedure codes to post payments to
                 <br />
-                <div style="margin:10px;">
+                <div class="margin-10">
                     <!--Patient 1-->
-                    <label style="font-weight:bold">
+                    <label class="bold-heading">
                         Flinstone, Fred (10026244)
                     </label>
-                    <div style="float:right;">
+                    <div class="show-codes-check">
                         <input type="checkbox" />
                         Show codes without patient dues
                     </div>
@@ -257,18 +254,16 @@
                         <div class="proc-code-total ">
                             $0.00
                         </div>
-                        <div class="proc-code-total ">
-                            &nbsp;
-                        </div>
+                        <div class="proc-code-total "></div>
                     </div>
 
                     <br />
                     <br />
                     <!--Patient 2-->
-                    <label style="font-weight:bold">
+                    <label class="bold-heading">
                         Flinstone, Wilma (10026245)
                     </label>
-                    <div style="float:right;">
+                    <div class="show-codes-check">
                         <input type="checkbox" />
                         Show codes without patient dues
                     </div>
@@ -342,9 +337,7 @@
                         <div class="proc-code-total ">
                             $0.00
                         </div>
-                        <div class="proc-code-total ">
-                            &nbsp;
-                        </div>
+                        <div class="proc-code-total "></div>
                     </div>
                 </div>
             </div>
@@ -357,15 +350,14 @@
     </div>
 
     <!-- Payment Details Modal Box -->
-    <div id="idetails" class="payment-details">
+    <div id="details-modal" class="payment-details">
         <div class="modal-content">
             <div class="bar">
                 Balance Summary
                 <i id="modal-close" class="material-icons">close</i>
             </div>
 
-            <div class="greybox-grid"
-                 style="padding: 17px;">
+            <div class="modal-grid">
                 <div>Patient Amount</div>
                 <div>: $20.00</div>
 

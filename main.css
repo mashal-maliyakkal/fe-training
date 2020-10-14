@@ -1,7 +1,7 @@
 .bar {
-	background: #147b8d;
+	background: rgb(20, 123, 141);
 	font: 800;
-	color: #ffffff;
+	color: rgb(255, 255, 255);
 	padding: 5px 6px 5px 12px;
 	font-weight: bold;
 }
@@ -9,8 +9,13 @@
 .bar > i{
 	float: right;
 	font-size: 20px;
-	margin-top: -3px;
 	cursor: pointer;
+}
+
+input[type="radio"] {
+	margin-top: -1px;
+	vertical-align: middle;
+	margin-left: 10px;
 }
 
 body {
@@ -28,7 +33,7 @@ hr {
 }
 
 .greybox {
-	background: #efefef;
+	background: rgb(239, 239, 239);
 	border-radius: 7px;
 	padding: 20px;
 	margin: 3mm;
@@ -55,28 +60,29 @@ hr {
 .submit {
 	font-size: 12px;
 	font-family: 'Roboto', sans-serif;
-	background: #ffe8c0;
+	background: rgb(255, 232, 192);
 	margin: 10px 10px 0px 20px;
 	padding: 3px 6px 3px 6px;
 	outline: none;
 	cursor: pointer;
 	float: right;
-	color: #000;
-	background-color: #ffe8c0;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 232, 192);
 	border-radius: 2px 2px;
-	border: 1.5px solid #ca6760;
+	border: 1.5px solid rgb(202, 103, 96);
 }
 
 .submit:hover {
-	color: #fff;
-	background: #ca6760;
-	border-color: #ca6760;
+	color: rgb(255, 255, 255);
+	background: rgb(202, 103, 96);
+	border-color: rgb(202, 103, 96);
 }
 
 input.pay-det, select, textarea{
 	border: 1.5px solid rgb(213,213,213);
 	border-radius: 5px;
 	padding: 5px;
+	margin: 0px 20px 0px 10px;
 }
 
 input[type="radio"] {
@@ -84,7 +90,7 @@ input[type="radio"] {
 }
 
 select{
-	width: 300px;
+	width: 250px;
 }
 
 textarea {
@@ -94,11 +100,11 @@ textarea {
 
 input:focus, select:focus, textarea:focus{
 	outline: none;
-	border-color: dodgerblue;
+	border-color: rgb(30, 144, 255);
 }
 
 label > span{
-	color:red;
+	color: rgb(255, 0, 0);
 }
 
 /*
@@ -129,7 +135,7 @@ label > span{
 
 .pay-container {
 	display: grid;
-	grid-template-columns: 2fr 13fr;
+	grid-template-columns: 1fr 6fr;
 	column-gap: 15px;
 	grid-row-gap: 10px;
 	align-items: center;
@@ -150,12 +156,12 @@ label > span{
 
 .proc-code-header {
 	font-weight: bold;
-	background: #e1e8ed;
+	background: rgb(225, 232, 237);
 }
 
 .proc-code-total {
 	padding: 5px 3px 5px 5px !important;
-	background: #ffefef;
+	background: rgb(255, 239, 239);
 }
 
 .total-box {
@@ -166,7 +172,7 @@ label > span{
 
 .pay-amt-grid-item {
 	padding: 7px 3px 5px 5px!important;
-	background: #ffffff;
+	background: rgb(255, 255, 255);
 }
 
 .pay-amt-box {
@@ -184,7 +190,7 @@ label > span{
 	cursor: pointer;
 	margin-top:2px;
 	font-size: 18px;
-	color: #147b8d
+	color: rgb(20, 123, 141)
 }
 
 /* Payment Info Modal Box*/
@@ -203,11 +209,11 @@ label > span{
 }
 
 .modal-content {
-	background-color: #fefefe;
+	background-color: rgb(254, 254, 254);
 	margin: 15% auto; /* 15% from the top and centered */
-	border: 1px solid #888;
+	border: 1px solid rgb(136, 136, 136);
 	width: 32%;
-	background-color: #fff;
+	background-color: rgb(255, 255, 255);
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
@@ -215,8 +221,8 @@ label > span{
 
 input[type="checkbox"] {
 	-webkit-appearance: none;
-	background-color: #ffffff;
-	border: 1px solid #cacece;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(202, 206, 206);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 6px;
 	border-radius: 3px;
@@ -227,10 +233,10 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-	background-color: #ffffff;
-	border: 1px solid #adb8c0;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(173, 184, 192);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #99a1a7;
+	color: rgb(153, 161, 167);
 }
 
 input[type="checkbox"]:checked:after {
@@ -239,7 +245,7 @@ input[type="checkbox"]:checked:after {
 	position: absolute;
 	top: -1px;
 	left: 2px;
-	color: #99a1a7;
+	color: rgb(153, 161, 167);
 }
 
 /* Slider Styling */
@@ -249,7 +255,26 @@ input[type="checkbox"]:checked:after {
 	width: 0; /* changed with JavaScript */
 	position: fixed;
 	z-index: 1;	top: 0;	left: 0;
-	background-color: #fff; 
+	background-color: rgb(255, 255, 255); 
 	overflow-x: hidden; /* Disable horizontal scroll */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.bold-heading{
+	font-weight:bold;
+}
+
+.margin-10{
+	margin:10px;
+}
+
+.show-codes-check{
+	float: right;
+}
+
+.modal-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 20px;
+	padding: 17px;
 }
